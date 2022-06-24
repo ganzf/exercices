@@ -20,7 +20,7 @@ class Device:
         self.status = status
 
 class Data:
-    devices = []
+    devices: list[Device] = []
 
 data = Data()
 
