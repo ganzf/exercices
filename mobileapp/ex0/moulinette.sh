@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "./fizzbuzz" ]; then
+if [ -f "./fizzbuzz" ]; then
     ./fizzbuzz 16 > output.txt
     diff output.txt expected.txt
     success=$?
