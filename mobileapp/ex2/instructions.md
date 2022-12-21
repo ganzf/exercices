@@ -1,29 +1,7 @@
-# Ex2 - Device Manager
+# Socket
 
-Une api qui peut detecter des devices via un utilitaire (qu'on fourni avec le projet).
-Il faut detecter les device periodiquement dans un thread.
+You will be given a server that can be executed with python3
+This server is going to send the base64 of a jpg in a socket for the host 127.0.0.1 on the port 10000
 
-Example:
-
-```
-./device_detector [IOS|Android|Any]
-- IOS: 88129301-123717237 Iphone 10X
-- Android: asid912838asdsad Samsung Galaxy S10e
-```
-
-```
-./stream_device [UUID]
-FRAME (255, 0, 12) (255, 12, 44) (12, 0, 1)
-FRAME (255, 0, 12) (255, 12, 44) (12, 0, 1)
-FRAME (255, 0, 12) (255, 12, 44) (12, 0, 1)
-No frame detected - Device unavailable
-FRAME (255, 0, 12) (255, 10, 55) (0, 11, 10)
-```
-
-Api:
-
-```
-GET /devices?filter=[IOS|Android|Any] => JSON
-```
-
-
+The only thing you know is that the 6 first bytes sent by the server are the size of the picture
+Retrieve the whole jpg base64 from a client listening to the socket and write the picture in a file 
